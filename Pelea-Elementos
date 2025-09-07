@@ -1,0 +1,1184 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	string opcion;
+	cout<<"Bienvenido a Porquemon!"<<endl;
+	cin.get();
+	cout<<"Tenemos 3 Porquemones para que elija, dejandolo saber\nde que tipo es y el numero que le corresponde a cada uno."<<endl; 
+	cin.get();
+	cout<<"Malvadisco Asesino (Tipo Planta) [1]"<<endl;
+	cout<<"Pelusa Peluda (Tipo Agua) [2]"<<endl;
+	cout<<"Choro Galaxia (Tipo Fuego) [3]"<<endl;
+	cin.get();
+	cout<<"Escoja un porquemon que le haya gustado, con su numero correspondiente --> "<<endl;
+	cin>>opcion;
+
+/*Fuego<Agua
+Planta<Fuego
+Planta<Agua*/
+
+	if(opcion=="1")
+	{
+		cout<<"\nHas escojido a Malvadisco Asesino!"<<endl;/*malvadisco asesino*/
+		cout<<"CP:100 | ATK:20"<<endl;
+		string opcion;
+	
+		cout<<"¿Esta listo para empezar?\nEscoja entre pelear contra Pelusa Peluda [1] o Choro Galaxia [2] --> "<<endl;
+		cin>>opcion;
+
+		if(opcion=="1")/*malvadisco vs pelusa listo*/
+		{
+	     	cout<<"\nMalvadisco Asesino vs. Pelusa Peluda"<<endl;
+			cout<<"¡PELEEN!"<<endl;
+
+			cin.ignore();
+			cin.get();
+
+			int ataque1Planta;
+			int cp1Agua=100;
+			int cp1Planta=100;
+			//ATAQUE 1
+			cout<<"\nMalvadisco Asesino, es tu turno de dar tu primer ataque!\nTienes opciones del 1 al 10 para tu ataque\nMientras menos ataques, mejor!\nIngresa tu primer ataque --> "<<endl;
+			cin>>ataque1Planta;
+
+			int atk1Planta = (ataque1Planta*20/2);
+			int cp2Agua = cp1Agua - atk1Planta;
+
+			cout<<atk1Planta<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp2Agua<<" de CP!"<<endl;
+
+			if(cp2Agua<=0)
+			{
+				cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 1 ataque!\n10000 Puntos!"<<endl;
+			}
+
+			else
+			{
+				int atk1Agua = atk1Planta*2;
+				int cp2Planta = cp1Planta - atk1Agua;
+
+				cin.ignore();
+				cin.get();
+
+				cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+				cin.get();
+				cout<<atk1Agua<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp2Planta<<" de CP!"<<endl;
+
+				if(cp2Planta<=0)
+				{
+					cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 1 ataque!\nGAME OVER"<<endl;
+				}
+
+				else//ATAQUE 2
+				{
+					int ataque2Planta;
+
+					cout<<"\nMalvadisco Asesino, es tu turno de dar tu segundo ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+					cin>>ataque2Planta;
+
+					int atk2Planta = (ataque2Planta*20/2);
+					int cp3Agua = cp2Agua - atk2Planta;
+
+					cout<<atk2Planta<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp3Agua<<" de CP!"<<endl;
+
+					if(cp3Agua<=0)
+					{
+						cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 2 ataques!\n8000 Puntos!"<<endl;
+					}
+
+					else
+					{
+						int atk2Agua = atk2Planta*2;
+						int cp3Planta = cp2Planta - atk2Agua;
+
+						cin.ignore();
+						cin.get();
+
+						cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+						cin.get();
+						cout<<atk2Agua<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp3Planta<<" de CP!"<<endl;
+
+						if(cp3Planta<=0)
+						{
+							cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 2 ataques!\nGAME OVER"<<endl;
+						}
+
+						else //ATAQUE 3
+						{
+							int ataque3Planta;
+
+							cout<<"\nMalvadisco Asesino, es tu turno de dar tu tercer ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+							cin>>ataque3Planta;
+
+							int atk3Planta = (ataque3Planta*20/2);
+							int cp4Agua = cp3Agua - atk3Planta;
+
+							cout<<atk3Planta<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp4Agua<<" de CP!"<<endl;
+
+							if(cp4Agua<=0)
+							{
+								cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 3 ataques!\n6000 Puntos!"<<endl;
+							}
+
+							else
+							{
+								int atk3Agua = atk3Planta*2;
+								int cp4Planta = cp3Planta - atk3Agua;
+
+								cin.ignore();
+								cin.get();
+
+								cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+								cin.get();
+								cout<<atk3Agua<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp4Planta<<" de CP!"<<endl;
+
+								if(cp4Planta<=0)
+								{
+									cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 3 ataques!\nGAME OVER"<<endl;
+								}
+
+								else//ATAQUE 4
+								{
+									int ataque4Planta;
+
+									cout<<"\nMalvadisco Asesino, es tu turno de dar tu cuarto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+									cin>>ataque4Planta;
+
+									int atk4Planta = (ataque4Planta*20/2);
+									int cp5Agua = cp4Agua - atk4Planta;
+
+									cout<<atk4Planta<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp5Agua<<" de CP!"<<endl;
+
+									if(cp5Agua<=0)
+									{
+										cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 4 ataques!\n4000 Puntos!"<<endl;
+									}
+
+									else
+									{
+										int atk4Agua = atk4Planta*2;
+										int cp5Planta = cp4Planta - atk4Agua;
+
+										cin.ignore();
+										cin.get();
+
+										cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+										cin.get();
+										cout<<atk4Agua<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp5Planta<<" de CP!"<<endl;
+
+										if(cp5Planta<=0)
+										{
+											cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 4 ataques!\nGAME OVER"<<endl;
+										}
+
+										else//ATAQUE 5
+										{
+											int ataque5Planta;
+
+											cout<<"\nMalvadisco Asesino, es tu turno de dar tu quinto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+											cin>>ataque5Planta;
+
+											int atk5Planta = (ataque5Planta*20/2);
+											int cp6Agua = cp5Agua - atk5Planta;
+
+											cout<<atk5Planta<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp6Agua<<" de CP!"<<endl;
+
+											if(cp6Agua<=0)
+											{
+												cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 5 ataques!\n2000 Puntos!"<<endl;
+											}
+
+											else
+											{
+												int atk5Agua = atk5Planta*2;
+												int cp6Planta = cp5Planta - atk5Agua;
+
+												cin.ignore();
+												cin.get();
+
+												cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+												cin.get();
+												cout<<atk5Agua<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp6Planta<<" de CP!"<<endl;
+
+												if(cp6Planta<=0)
+												{
+													cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 5 ataques!\nGAME OVER"<<endl;
+												}
+											}
+										}
+									}
+								}
+							}		
+						}
+					}
+				}
+			}
+		}
+
+		else if(opcion=="2")/*malvadisco vs galaxia listo*/
+		{
+			cout<<"Malvadisco Asesino vs. Choro Galaxia"<<endl;
+			cout<<"¡PELEEN!"<<endl;
+
+			cin.ignore();
+			cin.get();
+
+			int ataque1Planta;
+			int cp1Fuego=100;
+			int cp1Planta=100;
+			//ATAQUE 1
+			cout<<"\nMalvadisco Asesino, es tu turno de dar tu primer ataque!\nTienes opciones del 1 al 10 para tu ataque\nMientras menos ataques, mejor!\nIngresa tu primer ataque --> "<<endl;
+			cin>>ataque1Planta;
+
+			int atk1Planta = (ataque1Planta*20/2);
+			int cp2Fuego = cp1Fuego - atk1Planta;
+
+			cout<<atk1Planta<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp2Fuego<<" de CP!"<<endl;
+
+			if(cp2Fuego<=0)
+			{
+				cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 1 ataque!\n10000 Puntos!"<<endl;
+			}
+
+			else
+			{
+				int atk1Fuego = atk1Planta*2;
+				int cp2Planta = cp1Planta - atk1Fuego;
+
+				cin.ignore();
+				cin.get();
+
+				cout<<"Choro Galaxia, ahora es tu turno!"<<endl;
+				cin.get();
+				cout<<atk1Fuego<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp2Planta<<" de CP!"<<endl;
+
+				if(cp2Planta<=0)
+				{
+					cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 1 ataque!\nGAME OVER"<<endl;
+				}
+
+				else//ATAQUE 2
+				{
+					int ataque2Planta;
+
+					cout<<"\nMalvadisco Asesino, es tu turno de dar tu segundo ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+					cin>>ataque2Planta;
+
+					int atk2Planta = (ataque2Planta*20/2);
+					int cp3Fuego = cp2Fuego - atk2Planta;
+
+					cout<<atk2Planta<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp3Fuego<<" de CP!"<<endl;
+
+					if(cp3Fuego<=0)
+					{
+						cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 2 ataques!\n8000 Puntos!"<<endl;
+					}
+
+					else
+					{
+						int atk2Fuego = atk2Planta*2;
+						int cp3Planta = cp2Planta - atk2Fuego;
+
+						cin.ignore();
+						cin.get();
+
+						cout<<"Choro Galaxia, ahora es tu turno!"<<endl;
+						cin.get();
+						cout<<atk2Fuego<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp3Planta<<" de CP!"<<endl;
+
+						if(cp3Planta<=0)
+						{
+							cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 2 ataques!\nGAME OVER"<<endl;
+						}
+
+						else //ATAQUE 3
+						{
+							int ataque3Planta;
+
+							cout<<"\nMalvadisco Asesino, es tu turno de dar tu tercer ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+							cin>>ataque3Planta;
+
+							int atk3Planta = (ataque3Planta*20/2);
+							int cp4Fuego = cp3Fuego - atk3Planta;
+
+							cout<<atk3Planta<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp4Fuego<<" de CP!"<<endl;
+
+							if(cp4Fuego<=0)
+							{
+								cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 3 ataques!\n6000 Puntos!"<<endl;
+							}
+
+							else
+							{
+								int atk3Fuego = atk3Planta*2;
+								int cp4Planta = cp3Planta - atk3Fuego;
+
+								cin.ignore();
+								cin.get();
+
+								cout<<"Choro Galaxia, ahora es tu turno!"<<endl;
+								cin.get();
+								cout<<atk3Fuego<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp4Planta<<" de CP!"<<endl;
+
+								if(cp4Planta<=0)
+								{
+									cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 3 ataques!\nGAME OVER"<<endl;
+								}
+
+								else//ATAQUE 4
+								{
+									int ataque4Planta;
+
+									cout<<"\nMalvadisco Asesino, es tu turno de dar tu cuarto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+									cin>>ataque4Planta;
+
+									int atk4Planta = (ataque4Planta*20/2);
+									int cp5Fuego = cp4Fuego - atk4Planta;
+
+									cout<<atk4Planta<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp5Fuego<<" de CP!"<<endl;
+
+									if(cp5Fuego<=0)
+									{
+										cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 4 ataques!\n4000 Puntos!"<<endl;
+									}
+
+									else
+									{
+										int atk4Fuego = atk4Planta*2;
+										int cp5Planta = cp4Planta - atk4Fuego;
+
+										cin.ignore();
+										cin.get();
+
+										cout<<"Choro Galaxia, ahora es tu turno!"<<endl;
+										cin.get();
+										cout<<atk4Fuego<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp5Planta<<" de CP!"<<endl;
+
+										if(cp5Planta<=0)
+										{
+											cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 4 ataques!\nGAME OVER"<<endl;
+										}
+
+										else//ATAQUE 5
+										{
+											int ataque5Planta;
+
+											cout<<"\nMalvadisco Asesino, es tu turno de dar tu quinto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+											cin>>ataque5Planta;
+
+											int atk5Planta = (ataque5Planta*20/2);
+											int cp6Fuego = cp5Fuego - atk5Planta;
+
+											cout<<atk5Planta<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp6Fuego<<" de CP!"<<endl;
+
+											if(cp6Fuego<=0)
+											{
+												cout<<"Malvadisco Asesino ha ganado la batalla de Porquemon con 5 ataques!\n2000 Puntos!"<<endl;
+											}
+
+											else
+											{
+												int atk5Fuego = atk5Planta*2;
+												int cp6Planta = cp5Planta - atk5Fuego;
+
+												cin.ignore();
+												cin.get();
+
+												cout<<"Choro Galaxia, ahora es tu turno!"<<endl;
+												cin.get();
+												cout<<atk5Fuego<<" de ataque!\nHas dejado a Malvadisco Asesino con "<<cp6Planta<<" de CP!"<<endl;
+
+												if(cp6Planta<=0)
+												{
+													cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 5 ataques!\nGAME OVER"<<endl;
+												}
+											}
+										}
+									}
+								}
+							}		
+						}
+					}
+				}
+			}
+		}
+	}
+
+	else if(opcion=="2")/*pelusa*/
+	{
+		cout<<"Has escojido a Pelusa Peluda, el mas peludo de todos!"<<endl;
+		cout<<"CP:100 | ATK:20"<<endl;
+		string opcion;
+	
+		cout<<"¿Esta listo para empezar?\nEscoja entre pelear contra Malvadisco Asesino [1] o Choro Galaxia [2] --> "<<endl;
+		cin>>opcion;
+
+		if(opcion=="1")/*pelusa vs malvadisco*/
+		{
+			cout<<"Pelusa Peluda vs Malvadisco Asesino"<<endl;
+			cout<<"¡PELEEN!"<<endl;
+
+			cin.ignore();
+			cin.get();
+
+			int ataque1Planta;
+			int cp1Agua=100;
+			int cp1Planta=100;
+			//ATAQUE 1
+			cout<<"\nPelusa peluda, es tu turno de dar tu primer ataque!\nTienes opciones del 1 al 10 para tu ataque\nMientras menos ataques, mejor!\nIngresa tu primer ataque --> "<<endl;
+			cin>>ataque1Planta;
+
+			int atk1Planta = (ataque1Planta*20*2);
+			int cp2Agua = cp1Agua - atk1Planta;
+
+			cout<<atk1Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp2Agua<<" de CP!"<<endl;
+
+			if(cp2Agua<=0)
+			{
+				cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 1 ataque!\n10000 Puntos!"<<endl;
+			}
+
+			else
+			{
+				int atk1Agua = atk1Planta/2;
+				int cp2Planta = cp1Planta - atk1Agua;
+
+				cin.ignore();
+				cin.get();
+
+				cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+				cin.get();
+				cout<<atk1Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp2Planta<<" de CP!"<<endl;
+
+				if(cp2Planta<=0)
+				{
+					cout<<"Choro galaxia ha ganado la batalla de Porquemon con 1 ataque!\nGAME OVER"<<endl;
+				}
+
+				else//ATAQUE 2
+				{
+					int ataque2Planta;
+
+					cout<<"\nPelusa peluda, es tu turno de dar tu segundo ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+					cin>>ataque2Planta;
+
+					int atk2Planta = (ataque2Planta*20*2);
+					int cp3Agua = cp2Agua - atk2Planta;
+
+					cout<<atk2Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp3Agua<<" de CP!"<<endl;
+
+					if(cp3Agua<=0)
+					{
+						cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 2 ataques!\n8000 Puntos!"<<endl;
+					}
+
+					else
+					{
+						int atk2Agua = atk2Planta/2;
+						int cp3Planta = cp2Planta - atk2Agua;
+
+						cin.ignore();
+						cin.get();
+
+						cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+						cin.get();
+						cout<<atk2Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp3Planta<<" de CP!"<<endl;
+
+						if(cp3Planta<=0)
+						{
+							cout<<"Choro galaxia ha ganado la batalla de Porquemon con 2 ataques!\nGAME OVER"<<endl;
+						}
+
+						else //ATAQUE 3
+						{
+							int ataque3Planta;
+
+							cout<<"\nPelusa peluda, es tu turno de dar tu tercer ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+							cin>>ataque3Planta;
+
+							int atk3Planta = (ataque3Planta*20*2);
+							int cp4Agua = cp3Agua - atk3Planta;
+
+							cout<<atk3Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp4Agua<<" de CP!"<<endl;
+
+							if(cp4Agua<=0)
+							{
+								cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 3 ataques!\n6000 Puntos!"<<endl;
+							}
+
+							else
+							{
+								int atk3Agua = atk3Planta/2;
+								int cp4Planta = cp3Planta - atk3Agua;
+
+								cin.ignore();
+								cin.get();
+
+								cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+								cin.get();
+								cout<<atk3Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp4Planta<<" de CP!"<<endl;
+
+								if(cp4Planta<=0)
+								{
+									cout<<"Choro galaxia ha ganado la batalla de Porquemon con 3 ataques!\nGAME OVER"<<endl;
+								}
+
+								else//ATAQUE 4
+								{
+									int ataque4Planta;
+
+									cout<<"\nPelusa peluda, es tu turno de dar tu cuarto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+									cin>>ataque4Planta;
+
+									int atk4Planta = (ataque4Planta*20*2);
+									int cp5Agua = cp4Agua - atk4Planta;
+
+									cout<<atk4Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp5Agua<<" de CP!"<<endl;
+
+									if(cp5Agua<=0)
+									{
+										cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 4 ataques!\n4000 Puntos!"<<endl;
+									}
+
+									else
+									{
+										int atk4Agua = atk4Planta/2;
+										int cp5Planta = cp4Planta - atk4Agua;
+
+										cin.ignore();
+										cin.get();
+
+										cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+										cin.get();
+										cout<<atk4Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp5Planta<<" de CP!"<<endl;
+
+										if(cp5Planta<=0)
+										{
+											cout<<"Choro galaxia ha ganado la batalla de Porquemon con 4 ataques!\nGAME OVER"<<endl;
+										}
+
+										else//ATAQUE 5
+										{
+											int ataque5Planta;
+
+											cout<<"\nPelusa peluda, es tu turno de dar tu quinto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+											cin>>ataque5Planta;
+
+											int atk5Planta = (ataque5Planta*20*2);
+											int cp6Agua = cp5Agua - atk5Planta;
+
+											cout<<atk5Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp6Agua<<" de CP!"<<endl;
+
+											if(cp6Agua<=0)
+											{
+												cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 5 ataques!\n2000 Puntos!"<<endl;
+											}
+
+											else
+											{
+												int atk5Agua = atk5Planta/2;
+												int cp6Planta = cp5Planta - atk5Agua;
+
+												cin.ignore();
+												cin.get();
+
+												cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+												cin.get();
+												cout<<atk5Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp6Planta<<" de CP!"<<endl;
+
+												if(cp6Planta<=0)
+												{
+													cout<<"Choro galaxia ha ganado la batalla de Porquemon con 5 ataques!\nGAME OVER"<<endl;
+												}
+											}
+										}
+									}
+								}
+							}		
+						}
+					}
+				}
+			}
+		}
+
+		else if(opcion=="2")/*pelusa vs galaxia listo*/
+		{
+			cout<<"Pelusa Peluda vs Choro Galaxia"<<endl;
+			cout<<"¡PELEEN!"<<endl;
+			cin.ignore();
+			cin.get();
+
+			int ataque1Planta;
+			int cp1Agua=100;
+			int cp1Planta=100;
+			//ATAQUE 1
+			cout<<"\nPelusa peluda, es tu turno de dar tu primer ataque!\nTienes opciones del 1 al 10 para tu ataque\nMientras menos ataques, mejor!\nIngresa tu primer ataque --> "<<endl;
+			cin>>ataque1Planta;
+
+			int atk1Planta = (ataque1Planta*20*2);
+			int cp2Agua = cp1Agua - atk1Planta;
+
+			cout<<atk1Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp2Agua<<" de CP!"<<endl;
+
+			if(cp2Agua<=0)
+			{
+				cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 1 ataque!\n10000 Puntos!"<<endl;
+			}
+
+			else
+			{
+				int atk1Agua = atk1Planta/2;
+				int cp2Planta = cp1Planta - atk1Agua;
+
+				cin.ignore();
+				cin.get();
+
+				cout<<"Malvadisco asesino, ahora es tu turno!"<<endl;
+				cin.get();
+				cout<<atk1Agua<<" de ataque!\nHas dejado a Pelusa pelusa con "<<cp2Planta<<" de CP!"<<endl;
+
+				if(cp2Planta<=0)
+				{
+					cout<<"Malvadisco asesino ha ganado la batalla de Porquemon con 1 ataque!\nGAME OVER"<<endl;
+				}
+
+				else//ATAQUE 2
+				{
+					int ataque2Planta;
+
+					cout<<"\nPelusa peluda, es tu turno de dar tu segundo ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+					cin>>ataque2Planta;
+
+					int atk2Planta = (ataque2Planta*20*2);
+					int cp3Agua = cp2Agua - atk2Planta;
+
+					cout<<atk2Planta<<" de ataque!\nHas dejado aChoro galaxia con "<<cp3Agua<<" de CP!"<<endl;
+
+					if(cp3Agua<=0)
+					{
+						cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 2 ataques!\n8000 Puntos!"<<endl;
+					}
+
+					else
+					{
+						int atk2Agua = atk2Planta/2;
+						int cp3Planta = cp2Planta - atk2Agua;
+
+						cin.ignore();
+						cin.get();
+
+						cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+						cin.get();
+						cout<<atk2Agua<<" de ataque!\nHas dejado aPelusa peluda con "<<cp3Planta<<" de CP!"<<endl;
+
+						if(cp3Planta<=0)
+						{
+							cout<<"Choro galaxia ha ganado la batalla de Porquemon con 2 ataques!\nGAME OVER"<<endl;
+						}
+
+						else //ATAQUE 3
+						{
+							int ataque3Planta;
+
+							cout<<"\nPelusa peluda, es tu turno de dar tu tercer ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+							cin>>ataque3Planta;
+
+							int atk3Planta = (ataque3Planta*20*2);
+							int cp4Agua = cp3Agua - atk3Planta;
+
+							cout<<atk3Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp4Agua<<" de CP!"<<endl;
+
+							if(cp4Agua<=0)
+							{
+								cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 3 ataques!\n6000 Puntos!"<<endl;
+							}
+
+							else
+							{
+								int atk3Agua = atk3Planta/2;
+								int cp4Planta = cp3Planta - atk3Agua;
+
+								cin.ignore();
+								cin.get();
+
+								cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+								cin.get();
+								cout<<atk3Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp4Planta<<" de CP!"<<endl;
+
+								if(cp4Planta<=0)
+								{
+									cout<<"Choro galaxia ha ganado la batalla de Porquemon con 3 ataques!\nGAME OVER"<<endl;
+								}
+
+								else//ATAQUE 4
+								{
+									int ataque4Planta;
+
+									cout<<"\nPelusa peluda, es tu turno de dar tu cuarto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+									cin>>ataque4Planta;
+
+									int atk4Planta = (ataque4Planta*20*2);
+									int cp5Agua = cp4Agua - atk4Planta;
+
+									cout<<atk4Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp5Agua<<" de CP!"<<endl;
+
+									if(cp5Agua<=0)
+									{
+										cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 4 ataques!\n4000 Puntos!"<<endl;
+									}
+
+									else
+									{
+										int atk4Agua = atk4Planta/2;
+										int cp5Planta = cp4Planta - atk4Agua;
+
+										cin.ignore();
+										cin.get();
+
+										cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+										cin.get();
+										cout<<atk4Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp5Planta<<" de CP!"<<endl;
+
+										if(cp5Planta<=0)
+										{
+											cout<<"Choro galaxia ha ganado la batalla de Porquemon con 4 ataques!\nGAME OVER"<<endl;
+										}
+
+										else//ATAQUE 5
+										{
+											int ataque5Planta;
+
+											cout<<"\nPelusa peluda, es tu turno de dar tu quinto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+											cin>>ataque5Planta;
+
+											int atk5Planta = (ataque5Planta*20*2);
+											int cp6Agua = cp5Agua - atk5Planta;
+
+											cout<<atk5Planta<<" de ataque!\nHas dejado a Choro galaxia con "<<cp6Agua<<" de CP!"<<endl;
+
+											if(cp6Agua<=0)
+											{
+												cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 5 ataques!\n2000 Puntos!"<<endl;
+											}
+
+											else
+											{
+												int atk5Agua = atk5Planta/2;
+												int cp6Planta = cp5Planta - atk5Agua;
+
+												cin.ignore();
+												cin.get();
+
+												cout<<"Choro galaxia, ahora es tu turno!"<<endl;
+												cin.get();
+												cout<<atk5Agua<<" de ataque!\nHas dejado a Pelusa peluda con "<<cp6Planta<<" de CP!"<<endl;
+
+												if(cp6Planta<=0)
+												{
+													cout<<"Choro galaxia ha ganado la batalla de Porquemon con 5 ataques!\nGAME OVER"<<endl;
+												}
+											}
+										}
+									}
+								}
+							}		
+						}
+					}
+				}
+			}
+			
+		}
+	}
+
+	else if(opcion=="3")/*choro galaxia*/
+	{
+		cout<<"Has escojido a Choro Galaxia, el mas galactico de todos!"<<endl;
+		cout<<"CP:100 | ATK:20"<<endl;
+		string opcion;
+		
+		cout<<"¿Esta listo para empezar?\nEscoja entre pelear contra Malvadisco Asesino [1] o Pelusa Peluda [2] --> "<<endl;
+		cin>>opcion;
+
+		if(opcion=="1")/*galaxia vs malvadisco*/
+		{
+			cout<<"Choro Galaxia vs Malvadisco Asesino"<<endl;
+			cout<<"¡PELEEN!"<<endl;
+		
+			cin.ignore();
+			cin.get();
+
+			int ataque1Planta;
+			int cp1Agua=100;
+			int cp1Planta=100;
+			//ATAQUE 1
+			cout<<"\nChoro galaxia, es tu turno de dar tu primer ataque!\nTienes opciones del 1 al 10 para tu ataque\nMientras menos ataques, mejor!\nIngresa tu primer ataque --> "<<endl;
+			cin>>ataque1Planta;
+
+			int atk1Planta = (ataque1Planta*20*2);
+			int cp2Agua = cp1Agua - atk1Planta;
+
+			cout<<atk1Planta<<" de ataque!\nHas dejado aMalvadisco asesiono con "<<cp2Agua<<" de CP!"<<endl;
+
+			if(cp2Agua<=0)
+			{
+				cout<<"Choro galaxia ha ganado la batalla de Porquemon con 1 ataque!\n10000 Puntos!"<<endl;
+			}
+
+			else
+			{
+				int atk1Agua = atk1Planta/2;
+				int cp2Planta = cp1Planta - atk1Agua;
+
+				cin.ignore();
+				cin.get();
+
+				cout<<"Malvadisco asesino, ahora es tu turno!"<<endl;
+				cin.get();
+				cout<<atk1Agua<<" de ataque!\nHas dejado aPelusa peluda con "<<cp2Planta<<" de CP!"<<endl;
+
+				if(cp2Planta<=0)
+				{
+					cout<<"Malvadisco asesino ha ganado la batalla de Porquemon con 1 ataque!\nGAME OVER"<<endl;
+				}
+
+				else//ATAQUE 2
+				{
+					int ataque2Planta;
+
+					cout<<"\nPelusa peluda, es tu turno de dar tu segundo ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+					cin>>ataque2Planta;
+
+					int atk2Planta = (ataque2Planta*20*2);
+					int cp3Agua = cp2Agua - atk2Planta;
+
+					cout<<atk2Planta<<" de ataque!\nHas dejado a Malvadisco asesino con "<<cp3Agua<<" de CP!"<<endl;
+
+					if(cp3Agua<=0)
+					{
+						cout<<"Pelusa peluda ha ganado la batalla de Porquemon con 2 ataques!\n8000 Puntos!"<<endl;
+					}
+
+					else
+					{
+						int atk2Agua = atk2Planta/2;
+						int cp3Planta = cp2Planta - atk2Agua;
+
+						cin.ignore();
+						cin.get();
+
+						cout<<"Malvadisco asesino, ahora es tu turno!"<<endl;
+						cin.get();
+						cout<<atk2Agua<<" de ataque!\nHas dejado a Choro galaxia con "<<cp3Planta<<" de CP!"<<endl;
+
+						if(cp3Planta<=0)
+						{
+							cout<<"Malvadisco asesino ha ganado la batalla de Porquemon con 2 ataques!\nGAME OVER"<<endl;
+						}
+
+						else //ATAQUE 3
+						{
+							int ataque3Planta;
+
+							cout<<"\nChoro galaxia, es tu turno de dar tu tercer ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+							cin>>ataque3Planta;
+
+							int atk3Planta = (ataque3Planta*20*2);
+							int cp4Agua = cp3Agua - atk3Planta;
+
+							cout<<atk3Planta<<" de ataque!\nHas dejado a Malvadisco asesino con "<<cp4Agua<<" de CP!"<<endl;
+
+							if(cp4Agua<=0)
+							{
+								cout<<"Choro galaxia ha ganado la batalla de Porquemon con 3 ataques!\n6000 Puntos!"<<endl;
+							}
+
+							else
+							{
+								int atk3Agua = atk3Planta/2;
+								int cp4Planta = cp3Planta - atk3Agua;
+
+								cin.ignore();
+								cin.get();
+
+								cout<<"Malvadisco asesino, ahora es tu turno!"<<endl;
+								cin.get();
+								cout<<atk3Agua<<" de ataque!\nHas dejado a Choro galaxia con "<<cp4Planta<<" de CP!"<<endl;
+
+								if(cp4Planta<=0)
+								{
+									cout<<"Malvadisco asesino ha ganado la batalla de Porquemon con 3 ataques!\nGAME OVER"<<endl;
+								}
+
+								else//ATAQUE 4
+								{
+									int ataque4Planta;
+
+									cout<<"\nChoro galaxia, es tu turno de dar tu cuarto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+									cin>>ataque4Planta;
+
+									int atk4Planta = (ataque4Planta*20*2);
+									int cp5Agua = cp4Agua - atk4Planta;
+
+									cout<<atk4Planta<<" de ataque!\nHas dejado a Malvadisco asesino con "<<cp5Agua<<" de CP!"<<endl;
+
+									if(cp5Agua<=0)
+									{
+										cout<<"Choro galaxia ha ganado la batalla de Porquemon con 4 ataques!\n4000 Puntos!"<<endl;
+									}
+
+									else
+									{
+										int atk4Agua = atk4Planta/2;
+										int cp5Planta = cp4Planta - atk4Agua;
+
+										cin.ignore();
+										cin.get();
+
+										cout<<"Malvadisco asesino, ahora es tu turno!"<<endl;
+										cin.get();
+										cout<<atk4Agua<<" de ataque!\nHas dejado a Choro galaxia con "<<cp5Planta<<" de CP!"<<endl;
+
+										if(cp5Planta<=0)
+										{
+											cout<<"Malvadisco asesino ha ganado la batalla de Porquemon con 4 ataques!\nGAME OVER"<<endl;
+										}
+
+										else//ATAQUE 5
+										{
+											int ataque5Planta;
+
+											cout<<"\nChoro galaxia, es tu turno de dar tu quinto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+											cin>>ataque5Planta;
+
+											int atk5Planta = (ataque5Planta*20*2);
+											int cp6Agua = cp5Agua - atk5Planta;
+
+											cout<<atk5Planta<<" de ataque!\nHas dejado a Malvadisco asesino con "<<cp6Agua<<" de CP!"<<endl;
+
+											if(cp6Agua<=0)
+											{
+												cout<<"Choro galaxia ha ganado la batalla de Porquemon con 5 ataques!\n2000 Puntos!"<<endl;
+											}
+
+											else
+											{
+												int atk5Agua = atk5Planta/2;
+												int cp6Planta = cp5Planta - atk5Agua;
+
+												cin.ignore();
+												cin.get();
+
+												cout<<"Malvadisco asesino, ahora es tu turno!"<<endl;
+												cin.get();
+												cout<<atk5Agua<<" de ataque!\nHas dejado a Choro galaxia con "<<cp6Planta<<" de CP!"<<endl;
+
+												if(cp6Planta<=0)
+												{
+													cout<<"Malvadisco asesino ha ganado la batalla de Porquemon con 5 ataques!\nGAME OVER"<<endl;
+												}
+											}
+										}
+									}
+								}
+							}		
+						}
+					}
+				}
+			}
+		}
+
+		else if(opcion=="2")/*galaxia vs pelusa listo*/
+		{
+			cout<<"Choro Galaxia vs Pelusa Peluda"<<endl;
+			cout<<"¡PELEEN!"<<endl;
+
+			cin.ignore();
+			cin.get();
+
+			int ataque1Fuego;
+			int cp1Agua=100;
+			int cp1Fuego=100;
+			//ATAQUE 1
+			cout<<"\nChoro Galaxia, es tu turno de dar tu primer ataque!\nTienes opciones del 1 al 10 para tu ataque\nMientras menos ataques, mejor!\nIngresa tu primer ataque --> "<<endl;
+			cin>>ataque1Fuego;
+
+			int atk1Fuego = (ataque1Fuego*20/2);
+			int cp2Agua = cp1Agua - atk1Fuego;
+
+			cout<<atk1Fuego<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp2Agua<<" de CP!"<<endl;
+
+			if(cp2Agua<=0)
+			{
+				cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 1 ataque!\n10000 Puntos!"<<endl;
+			}
+
+			else
+			{
+				int atk1Agua = atk1Fuego/2;
+				int cp2Fuego = cp1Fuego - atk1Agua;
+
+				cin.ignore();
+				cin.get();
+
+				cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+				cin.get();
+				cout<<atk1Agua<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp2Fuego<<" de CP!"<<endl;
+
+				if(cp2Fuego<=0)
+				{
+					cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 1 ataque!\nGAME OVER"<<endl;
+				}
+
+				else//ATAQUE 2
+				{
+					int ataque2Fuego;
+
+					cout<<"\nChoro Galaxia, es tu turno de dar tu segundo ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+					cin>>ataque2Fuego;
+
+					int atk2Fuego = (ataque2Fuego*20/2);
+					int cp3Agua = cp2Agua - atk2Fuego;
+
+					cout<<atk2Fuego<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp3Agua<<" de CP!"<<endl;
+
+					if(cp3Agua<=0)
+					{
+						cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 2 ataques!\n8000 Puntos!"<<endl;
+					}
+
+					else
+					{
+						int atk2Agua = atk2Fuego*2;
+						int cp3Fuego = cp2Fuego - atk2Agua;
+
+						cin.ignore();
+						cin.get();
+
+						cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+						cin.get();
+						cout<<atk2Agua<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp3Fuego<<" de CP!"<<endl;
+
+						if(cp3Fuego<=0)
+						{
+							cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 2 ataques!\nGAME OVER"<<endl;
+						}
+
+						else //ATAQUE 3
+						{
+							int ataque3Fuego;
+
+							cout<<"\nChoro Galaxia, es tu turno de dar tu tercer ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+							cin>>ataque3Fuego;
+
+							int atk3Fuego = (ataque3Fuego*20/2);
+							int cp4Agua = cp3Agua - atk3Fuego;
+
+							cout<<atk3Fuego<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp4Agua<<" de CP!"<<endl;
+
+							if(cp4Agua<=0)
+							{
+								cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 3 ataques!\n6000 Puntos!"<<endl;
+							}
+
+							else
+							{
+								int atk3Agua = atk3Fuego*2;
+								int cp4Fuego = cp3Fuego - atk3Agua;
+
+								cin.ignore();
+								cin.get();
+
+								cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+								cin.get();
+								cout<<atk3Agua<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp4Fuego<<" de CP!"<<endl;
+
+								if(cp4Fuego<=0)
+								{
+									cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 3 ataques!\nGAME OVER"<<endl;
+								}
+
+								else//ATAQUE 4
+								{
+									int ataque4Fuego;
+
+									cout<<"\nChoro Galaxia, es tu turno de dar tu cuarto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+									cin>>ataque4Fuego;
+
+									int atk4Fuego = (ataque4Fuego*20/2);
+									int cp5Agua = cp4Agua - atk4Fuego;
+
+									cout<<atk4Fuego<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp5Agua<<" de CP!"<<endl;
+
+									if(cp5Agua<=0)
+									{
+										cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 4 ataques!\n4000 Puntos!"<<endl;
+									}
+
+									else
+									{
+										int atk4Agua = atk4Fuego*2;
+										int cp5Fuego = cp4Fuego - atk4Agua;
+
+										cin.ignore();
+										cin.get();
+
+										cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+										cin.get();
+										cout<<atk4Agua<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp5Fuego<<" de CP!"<<endl;
+
+										if(cp5Fuego<=0)
+										{
+											cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 4 ataques!\nGAME OVER"<<endl;
+										}
+
+										else//ATAQUE 5
+										{
+											int ataque5Fuego;
+
+											cout<<"\nChoro Galaxia, es tu turno de dar tu quinto ataque!\nTienes opciones del 1 al 10 para tu ataque\nIngresa tu ataque --> "<<endl;
+											cin>>ataque5Fuego;
+
+											int atk5Fuego = (ataque5Fuego*20/2);
+											int cp6Agua = cp5Agua - atk5Fuego;
+
+											cout<<atk5Fuego<<" de ataque!\nHas dejado a Pelusa Peluda con "<<cp6Agua<<" de CP!"<<endl;
+
+											if(cp6Agua<=0)
+											{
+												cout<<"Choro Galaxia ha ganado la batalla de Porquemon con 5 ataques!\n2000 Puntos!"<<endl;
+											}
+
+											else
+											{
+												int atk5Agua = atk5Fuego*2;
+												int cp6Fuego = cp5Fuego - atk5Agua;
+
+												cin.ignore();
+												cin.get();
+
+												cout<<"Pelusa Peluda, ahora es tu turno!"<<endl;
+												cin.get();
+												cout<<atk5Agua<<" de ataque!\nHas dejado a Choro Galaxia con "<<cp6Fuego<<" de CP!"<<endl;
+
+												if(cp6Fuego<=0)
+												{
+													cout<<"Pelusa Peluda ha ganado la batalla de Porquemon con 5 ataques!\nGAME OVER"<<endl;
+												}
+											}
+										}
+									}
+								}
+							}		
+						}
+					}
+				}
+			}
+		}
+	}
+
+	else{
+		cout<<"Porquemon no existente. Debe escojer entre el 1,2 o 3.\nIntente denuevo"<<endl;
+	}
+}
+
